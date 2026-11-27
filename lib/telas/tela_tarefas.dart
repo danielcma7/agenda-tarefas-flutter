@@ -133,7 +133,6 @@ class _TelaTarefasState extends State<TelaTarefas> {
         child: Column(
           children: [
             CabecalhoUsuario(
-              subtitulo: 'Dia ${formatarData(widget.dia)}',
               botao: IconButton(
                 icon: const Icon(Icons.calendar_month, color: roxoEscuro),
                 tooltip: 'Voltar pro calendário',
