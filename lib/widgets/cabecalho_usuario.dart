@@ -3,10 +3,9 @@ import '../cores.dart';
 import '../dados/memoria.dart';
 
 class CabecalhoUsuario extends StatelessWidget {
-  final String? subtitulo;
-  final Widget? botao;
+  final Widget botao;
 
-  const CabecalhoUsuario({super.key, this.subtitulo, this.botao});
+  const CabecalhoUsuario({super.key, this.botao = const SizedBox()});
 
   @override
   Widget build(BuildContext context) {
@@ -29,14 +28,14 @@ class CabecalhoUsuario extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  subtitulo ?? 'RA: ${usuarioLogado?.ra ?? ''}',
+                  'RA: ${usuarioLogado?.ra ?? ''}',
                   style: const TextStyle(
                       fontSize: 15, fontWeight: FontWeight.w600),
                 ),
               ],
             ),
           ),
-          if (botao != null) botao!,
+          botao,
         ],
       ),
     );
